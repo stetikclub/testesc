@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Decodifique os 25 gatilhos mentais e os 7 pecados capitais do marketing. Uma experiência Matrix para transformar sua persuasão.">
+    <title>STETIK CLUB - Decodifique a Matrix da Persuasão</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&family=Teko:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor customizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-rain"></canvas>
+    
+    <!-- Grid 3D Background -->
+    <div id="grid-3d"></div>
+    
+    <!-- Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Scanlines Overlay -->
+    <div class="scanlines"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav-matrix">
+        <div class="nav-logo">
+            <span class="glitch" data-text="STETIK">STETIK</span>
+            <span class="nav-subtitle">CLUB</span>
+        </div>
+        <div class="nav-status">
+            <span class="pulse-dot"></span>
+            <span class="online-count">
+                <span id="decodificadores-online">5247</span> ONLINE
+            </span>
+        </div>
+    </nav>
+
+    <!-- SECTION 1: HERO - A ESCOLHA -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <span class="badge-icon">⚡</span>
+                <span class="badge-text">ACESSO EXCLUSIVO • 3% DA POPULAÇÃO</span>
+            </div>
+            
+            <h1 class="hero-title glitch" data-text="VOCÊ ESTÁ PRONTO PARA VER ALÉM DO CÓDIGO?" data-aos="fade-up" data-aos-delay="200">
+                VOCÊ ESTÁ PRONTO PARA VER ALÉM DO CÓDIGO?
+            </h1>
+            
+            <div class="typing-container" data-aos="fade-up" data-aos-delay="400">
+                <p class="hero-subtitle">
+                    <span id="typed-text"></span>
+                </p>
+            </div>
+            
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="25">0</div>
+                    <div class="stat-label">Gatilhos Mentais</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number counter" data-target="7">0</div>
+                    <div class="stat-label">Pecados Capitais</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number">
+                        <span class="counter" data-target="97">0</span>%
+                    </div>
+                    <div class="stat-label">Taxa de Conversão</div>
+                </div>
+            </div>
+            
+            <div class="hero-cta" data-aos="zoom-in" data-aos-delay="800">
+                <button class="pill-button pill-red" id="red-pill">
+                    <span class="pill-glow"></span>
+                    <span class="pill-icon">💊</span>
+                    <span class="pill-text">PÍLULA VERMELHA</span>
+                    <span class="pill-subtext">Decodificar Agora</span>
+                </button>
+                
+                <button class="pill-button pill-blue" id="blue-pill">
+                    <span class="pill-glow"></span>
+                    <span class="pill-icon">💊</span>
+                    <span class="pill-text">PÍLULA AZUL</span>
+                    <span class="pill-subtext">Voltar à Ignorância</span>
+                </button>
+            </div>
+            
+            <div class="hero-trust" data-aos="fade-up" data-aos-delay="1000">
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-width="2"/>
+                    </svg>
+                    <span>Garantia 30 dias</span>
+                </div>
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-width="2"/>
+                    </svg>
+                    <span>Acesso imediato</span>
+                </div>
+                <div class="trust-item">
+                    <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" stroke-width="2"/>
+                    </svg>
+                    <span>100% Seguro</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3D Hologram Element -->
+        <div class="hologram-container" data-aos="fade-left" data-aos-delay="400">
+            <div class="hologram-cube"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: OS 7 PECADOS DIGITAIS -->
+    <section id="pecados" class="pecados-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">REVELAÇÃO NÍVEL 1</span>
+            <h2 class="section-title glitch" data-text="OS 7 PECADOS DIGITAIS">
+                OS 7 PECADOS DIGITAIS
+            </h2>
+            <p class="section-subtitle">
+                Forças primordiais que movem todas as decisões humanas.<br>
+                Domine-as ou seja dominado por elas.
+            </p>
+        </div>
+        
+        <div class="pecados-grid">
+            <!-- LUXÚRIA -->
+            <div class="pecado-card" data-pecado="luxuria" data-aos="zoom-in" data-aos-delay="100">
+                <div class="pecado-glow pecado-glow-luxuria"></div>
+                <div class="pecado-icon">
+                    <div class="icon-3d heart-pulse"></div>
+                </div>
+                <h3 class="pecado-name">LUXÚRIA</h3>
+                <p class="pecado-subtitle">Desejo Irresistível</p>
+                <div class="pecado-reveal">
+                    <p class="pecado-question">O que você REALMENTE deseja conquistar?</p>
+                    <ul class="pecado-desires">
+                        <li>Riqueza ilimitada</li>
+                        <li>Poder de influência</li>
+                        <li>Liberdade total</li>
+                        <li>Reconhecimento absoluto</li>
+                    </ul>
+                </div>
+                <div class="pecado-number">01</div>
+            </div>
+            
+            <!-- GULA -->
+            <div class="pecado-card" data-pecado="gula" data-aos="zoom-in" data-aos-delay="200">
+                <div class="pecado-glow pecado-glow-gula"></div>
+                <div class="pecado-icon">
+                    <div class="icon-3d spiral-infinite"></div>
+                </div>
+                <h3 class="pecado-name">GULA</h3>
+                <p class="pecado-subtitle">Consumo Infinito</p>
+                <div class="pecado-reveal">
+                    <p class="pecado-question">Quer MAIS? Sempre MAIS?</p>
+                    <div class="multiply-effect">
+                        <span>∞</span>
+                    </div>
+                </div>
+                <div class="pecado-number">02</div>
+            </div>
+            
+            <!-- GANÂNCIA -->
+            <div class="pecado-card" data-pecado="ganancia" data-aos="zoom-in" data-aos-delay="300">
+                <div class="pecado-glow pecado-glow-ganancia"></div>
+                <div class="pecado-icon">
+                    <div class="icon-3d dollar-sign"></div>
+                </div>
+                <h3 class="pecado-name">GANÂNCIA</h3>
+                <p class="pecado-subtitle">Avareza Máxima</p>
+                <div class="pecado-reveal">
+                    <p class="pecado-question">Maximize resultados.<br>Minimize esforço.</p>
+                    <div class="coins-rain"></div>
+                </div>
+                <div class="pecado-number">03</div>
+            </div>
+            
+            <!-- PREGUIÇA -->
+            <div class="pecado-card" data-pecado="preguica" data-aos="zoom-in" data-aos-delay="400">
+                <div class="pecado-glow pecado-glow-preguica"></div>
+                <div class="pecado-icon">
+                    <div class="icon-3d clock-stopped"></div>
+                </div>
+                <h3 class="pecado-name">PREGUIÇA</h3>
+                <p class="pecado-subtitle">Facilidade Absoluta</p>
+                <div class="pecado-reveal">
+                    <p class="pecado-question">Atalhos que FUNCIONAM</p>
+                    <div class="shortcut-path">→ → →</div>
+                </div>
+                <div class="pecado-number">04</div>
+            </div>
+            
+            <!-- IRA -->
+            <div class="pecado-card" data-pecado="ira" data-aos="zoom-in" data-aos-delay="500">
+                <div class="pecado-glow pecado-glow-ira"></div>
+                <div class="pecado-icon">
+                    <div class="icon-3d lightning-bolt"></div>
+                </div>
+                <h3 class="pecado-name">IRA</h3>
+                <p class="pecado-subtitle">Urgência Fatal</p>
+                <div class="pecado-reveal">
+                    <p class="pecado-question shake">AGORA ou NUNCA</p>
+                    <div class="urgency-pulse"></div>
+                </div>
+                <div class="pecado-number">05</div>
+            </div>
+            
+            <!-- INVEJA -->
+            <div class="pecado-card" data-pecado="inveja" data-aos="zoom-in" data-aos-delay="600">
+                <div class="pecado-glow pecado-glow-inveja"></div>
+                <div class="pecado-icon">
+                    <div class="icon-3d eye-watching"></div>
+                </div>
+                <h3 class="pecado-name">INVEJA</h3>
+                <p class="pecado-subtitle">Prova Social</p>
+                <div class="pecado-reveal">
+                    <p class="pecado-question">Eles já sabem.<br>E você?</p>
+                    <div class="avatars-circle">
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                        <div class="avatar"></div>
+                    </div>
+                </div>
+                <div class="pecado-number">06</div>
+            </div>
+            
+            <!-- SOBERBA -->
+            <div class="pecado-card" data-pecado="soberba" data-aos="zoom-in" data-aos-delay="700">
+                <div class="pecado-glow pecado-glow-soberba"></div>
+                <div class="pecado-icon">
+                    <div class="icon-3d crown-floating"></div>
+                </div>
+                <h3 class="pecado-name">SOBERBA</h3>
+                <p class="pecado-subtitle">Autoridade Suprema</p>
+                <div class="pecado-reveal">
+                    <p class="pecado-question">Seja o 1%</p>
+                    <div class="elite-badge">ELITE</div>
+                </div>
+                <div class="pecado-number">07</div>
+            </div>
+        </div>
+        
+        <div class="pecados-connection" data-aos="fade-up" data-aos-delay="800">
+            <p class="connection-text">
+                Cada pecado é uma <span class="highlight">força bruta</span> que move bilhões.<br>
+                Aprenda a <span class="highlight">canalizá-las</span> e nada será impossível.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 3: MATRIX DOS 25 GATILHOS -->
+    <section id="gatilhos" class="gatilhos-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">REVELAÇÃO NÍVEL 2</span>
+            <h2 class="section-title glitch" data-text="MATRIX DOS 25 GATILHOS">
+                MATRIX DOS 25 GATILHOS
+            </h2>
+            <p class="section-subtitle">
+                O arsenal completo de persuasão.<br>
+                25 códigos que controlam 99% das decisões humanas.
+            </p>
+        </div>
+        
+        <div class="gatilhos-grid" id="gatilhos-grid">
+            <!-- Os gatilhos serão gerados via JavaScript para melhor controle 3D -->
+        </div>
+        
+        <div class="gatilhos-legend" data-aos="fade-up" data-aos-delay="400">
+            <div class="legend-item">
+                <div class="legend-color" style="background: var(--matrix-green);"></div>
+                <span>Conexão Emocional</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: var(--cyan-electric);"></div>
+                <span>Desejo & Atração</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: var(--purple-deep);"></div>
+                <span>Transformação</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: var(--red-blood);"></div>
+                <span>Experiência</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: var(--gold-imperial);"></div>
+                <span>Estratégia Mental</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: QUIZ INTERATIVO -->
+    <section id="quiz" class="quiz-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">DECODIFICAÇÃO PESSOAL</span>
+            <h2 class="section-title glitch" data-text="DESCUBRA SEU PERFIL">
+                DESCUBRA SEU PERFIL DE PERSUASÃO
+            </h2>
+            <p class="section-subtitle">
+                3 perguntas para revelar seus gatilhos dominantes<br>
+                e personalizar sua jornada.
+            </p>
+        </div>
+        
+        <div class="quiz-container" id="quiz-container">
+            <!-- Quiz será gerado via JavaScript -->
+        </div>
+        
+        <div class="quiz-result" id="quiz-result" style="display: none;">
+            <!-- Resultado do quiz -->
+        </div>
+    </section>
+
+    <!-- SECTION 5: PROVA SOCIAL -->
+    <section id="prova-social" class="prova-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">VALIDAÇÃO DO SISTEMA</span>
+            <h2 class="section-title glitch" data-text="QUEM JÁ DECODIFICOU">
+                QUEM JÁ DECODIFICOU A MATRIX
+            </h2>
+            <p class="section-subtitle">
+                Depoimentos de quem saiu da ilusão<br>
+                e dominou a persuasão total.
+            </p>
+        </div>
+        
+        <div class="stats-mega" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-mega">
+                <div class="stat-mega-number">
+                    <span class="counter" data-target="5247">0</span>+
+                </div>
+                <div class="stat-mega-label">Decodificadores Ativos</div>
+            </div>
+            <div class="stat-mega">
+                <div class="stat-mega-number">
+                    R$ <span class="counter" data-target="2.3">0</span>M
+                </div>
+                <div class="stat-mega-label">Gerados por Alunos</div>
+            </div>
+            <div class="stat-mega">
+                <div class="stat-mega-number">
+                    <span class="counter" data-target="97">0</span>%
+                </div>
+                <div class="stat-mega-label">Taxa de Satisfação</div>
+            </div>
+        </div>
+        
+        <div class="testimonials-carousel" data-aos="fade-up" data-aos-delay="400">
+            <div class="testimonial-track" id="testimonial-track">
+                <!-- Depoimentos -->
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <div class="avatar-hologram"></div>
+                        <div class="avatar-verified">✓</div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Após dominar os 25 gatilhos, minhas taxas de conversão subiram 340%. É como ter um superpoder invisível."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Marcus Silva</span>
+                            <span class="author-title">CEO • Tech Startup</span>
+                        </div>
+                        <div class="testimonial-result">
+                            +340% Conversão
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <div class="avatar-hologram"></div>
+                        <div class="avatar-verified">✓</div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Finalmente entendi como a mente humana REALMENTE funciona. Os 7 pecados são a chave de tudo."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Ana Rodrigues</span>
+                            <span class="author-title">CMO • E-commerce</span>
+                        </div>
+                        <div class="testimonial-result">
+                            R$ 1.2M em vendas
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <div class="avatar-hologram"></div>
+                        <div class="avatar-verified">✓</div>
+                    </div>
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Não é teoria. É código puro que funciona. Cada gatilho é uma arma de persuasão testada e comprovada."</p>
+                        <div class="testimonial-author">
+                            <span class="author-name">Rafael Costa</span>
+                            <span class="author-title">Copywriter • Freelancer</span>
+                        </div>
+                        <div class="testimonial-result">
+                            +520% ROI
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: ARSENAL DE CONHECIMENTO -->
+    <section id="conteudo" class="conteudo-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">ARSENAL COMPLETO</span>
+            <h2 class="section-title glitch" data-text="O QUE VOCÊ VAI DOMINAR">
+                O QUE VOCÊ VAI DOMINAR
+            </h2>
+            <p class="section-subtitle">
+                4 módulos de destruição de paradigmas<br>
+                e reconstrução da realidade.
+            </p>
+        </div>
+        
+        <div class="modulos-grid">
+            <div class="modulo-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="modulo-lock unlocked">🔓</div>
+                <div class="modulo-icon">📦</div>
+                <h3 class="modulo-title">MÓDULO 1</h3>
+                <h4 class="modulo-name">Fundamentos da Matrix</h4>
+                <ul class="modulo-list">
+                    <li>7 Pecados Capitais do Marketing</li>
+                    <li>Psicologia da Decisão Humana</li>
+                    <li>Neurociência da Persuasão</li>
+                    <li>Teoria da Escolha Aplicada</li>
+                </ul>
+                <div class="modulo-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="100"></div>
+                    </div>
+                    <span class="progress-text">Acesso Imediato</span>
+                </div>
+            </div>
+            
+            <div class="modulo-card" data-aos="flip-left" data-aos-delay="200">
+                <div class="modulo-lock unlocked">🔓</div>
+                <div class="modulo-icon">📦</div>
+                <h3 class="modulo-title">MÓDULO 2</h3>
+                <h4 class="modulo-name">Os 25 Códigos</h4>
+                <ul class="modulo-list">
+                    <li>Cada gatilho em profundidade total</li>
+                    <li>Frameworks de aplicação prática</li>
+                    <li>Templates prontos para usar</li>
+                    <li>Cases reais de sucesso</li>
+                </ul>
+                <div class="modulo-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="100"></div>
+                    </div>
+                    <span class="progress-text">Acesso Imediato</span>
+                </div>
+            </div>
+            
+            <div class="modulo-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="modulo-lock unlocked">🔓</div>
+                <div class="modulo-icon">📦</div>
+                <h3 class="modulo-title">MÓDULO 3</h3>
+                <h4 class="modulo-name">Implementação Total</h4>
+                <ul class="modulo-list">
+                    <li>Copywriting que hipnotiza</li>
+                    <li>Funis de conversão máxima</li>
+                    <li>Campanhas irresistíveis</li>
+                    <li>Scripts de vendas infalíveis</li>
+                </ul>
+                <div class="modulo-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;" data-progress="100"></div>
+                    </div>
+                    <span class="progress-text">Acesso Imediato</span>
+                </div>
+            </div>
+            
+            <div class="modulo-card modulo-bonus" data-aos="flip-left" data-aos-delay="400">
+                <div class="modulo-lock unlocked">🔓</div>
+                <div class="modulo-icon">🎁</div>
+                <h3 class="modulo-title">MÓDULO 4</h3>
+                <h4 class="modulo-name">Arsenal Secreto</h4>
+                <ul class="modulo-list">
+                    <li>Ferramentas exclusivas premium</li>
+                    <li>Swipe files de campanhas 7-8 dígitos</li>
+                    <li>Comunidade privada VIP</li>
+                    <li>Mentoria direta comigo</li>
+                </ul>
+                <div class="modulo-badge">BÔNUS EXCLUSIVO</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: ESCASSEZ -->
+    <section id="escassez" class="escassez-section">
+        <div class="escassez-alert">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-text">
+                <strong>ALERTA DO SISTEMA:</strong> Oferta limitada detectada
+            </div>
+        </div>
+        
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">JANELA DE OPORTUNIDADE</span>
+            <h2 class="section-title glitch" data-text="TEMPO ESTÁ ACABANDO">
+                O TEMPO ESTÁ ACABANDO
+            </h2>
+            <p class="section-subtitle">
+                Esta oferta expira em breve.<br>
+                Depois disso, o acesso será fechado.
+            </p>
+        </div>
+        
+        <div class="timer-container" data-aos="zoom-in" data-aos-delay="200">
+            <div class="timer-hologram">
+                <div class="timer-segment">
+                    <div class="timer-number" id="hours">00</div>
+                    <div class="timer-label">HORAS</div>
+                </div>
+                <div class="timer-divider">:</div>
+                <div class="timer-segment">
+                    <div class="timer-number" id="minutes">00</div>
+                    <div class="timer-label">MINUTOS</div>
+                </div>
+                <div class="timer-divider">:</div>
+                <div class="timer-segment">
+                    <div class="timer-number" id="seconds">00</div>
+                    <div class="timer-label">SEGUNDOS</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="vagas-container" data-aos="fade-up" data-aos-delay="400">
+            <div class="vagas-text">
+                Apenas <span class="vagas-number" id="vagas-restantes">7</span> vagas restantes
+            </div>
+            <div class="vagas-bar">
+                <div class="vagas-fill" id="vagas-fill"></div>
+            </div>
+            <div class="vagas-subtext">
+                97% das vagas já foram preenchidas
+            </div>
+        </div>
+        
+        <div class="bonus-expiring" data-aos="fade-up" data-aos-delay="600">
+            <h3 class="bonus-title">BÔNUS QUE EXPIRAM COM O TIMER:</h3>
+            <div class="bonus-list">
+                <div class="bonus-item">
+                    <span class="bonus-icon">🎁</span>
+                    <div class="bonus-info">
+                        <strong>Templates de Copy 7 Dígitos</strong>
+                        <span class="bonus-value">Valor: R$ 997</span>
+                    </div>
+                    <div class="bonus-timer">
+                        <span class="timer-mini" data-expire="hours">00:00:00</span>
+                    </div>
+                </div>
+                <div class="bonus-item">
+                    <span class="bonus-icon">🎁</span>
+                    <div class="bonus-info">
+                        <strong>Acesso Vitalício à Comunidade</strong>
+                        <span class="bonus-value">Valor: R$ 1.497</span>
+                    </div>
+                    <div class="bonus-timer">
+                        <span class="timer-mini" data-expire="hours">00:00:00</span>
+                    </div>
+                </div>
+                <div class="bonus-item">
+                    <span class="bonus-icon">🎁</span>
+                    <div class="bonus-info">
+                        <strong>Sessão 1-on-1 Comigo</strong>
+                        <span class="bonus-value">Valor: R$ 2.997</span>
+                    </div>
+                    <div class="bonus-timer">
+                        <span class="timer-mini" data-expire="hours">00:00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: GARANTIA -->
+    <section id="garantia" class="garantia-section">
+        <div class="section-header" data-aos="fade-up">
+            <span class="section-tag">RISCO ZERO</span>
+            <h2 class="section-title glitch" data-text="GARANTIA INCONDICIONAL">
+                GARANTIA INCONDICIONAL
+            </h2>
+            <p class="section-subtitle">
+                Teste por 30 dias sem riscos.<br>
+                Não gostou? Devolvo 100% do seu investimento.
+            </p>
+        </div>
+        
+        <div class="garantia-shield" data-aos="zoom-in" data-aos-delay="200">
+            <div class="shield-3d">
+                <div class="shield-glow"></div>
+                <div class="shield-content">
+                    <div class="shield-badge">
+                        <span class="shield-number">30</span>
+                        <span class="shield-text">DIAS</span>
+                    </div>
+                    <div class="shield-title">GARANTIA TOTAL</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="garantia-text" data-aos="fade-up" data-aos-delay="400">
+            <p>
+                Eu estou tão confiante de que você vai <span class="highlight">TRANSFORMAR</span> seus resultados 
+                que assumo todo o risco. Se em 30 dias você não estiver satisfeito, 
+                basta me enviar um email e eu devolvo <span class="highlight">100% do seu dinheiro</span>.
+            </p>
+            <p class="garantia-subtext">
+                Sem perguntas. Sem burocracia. Sem pegadinhas.
+            </p>
+        </div>
+        
+        <div class="garantia-depoimento" data-aos="fade-up" data-aos-delay="600">
+            <div class="depoimento-quote">"</div>
+            <p class="depoimento-text">
+                Pedi reembolso só para testar a garantia. Recebi em 48 horas. 
+                Depois comprei novamente porque o conteúdo é OURO puro.
+            </p>
+            <div class="depoimento-author">
+                <span class="author-name">Lucas Mendes</span>
+                <span class="author-verified">✓ Verificado</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9: CTA FINAL -->
+    <section id="cta-final" class="cta-final-section">
+        <div class="cta-background-effect"></div>
+        
+        <div class="cta-content">
+            <div class="cta-header" data-aos="fade-up">
+                <span class="cta-tag">ÚLTIMA CHANCE</span>
+                <h2 class="cta-title glitch" data-text="DECODIFIQUE SUA REALIDADE">
+                    DECODIFIQUE SUA REALIDADE
+                </h2>
+                <p class="cta-subtitle">
+                    Junte-se aos <span class="highlight">3%</span> que enxergam além do código.<br>
+                    A Matrix está esperando você.
+                </p>
+            </div>
+            
+            <div class="cta-price" data-aos="zoom-in" data-aos-delay="200">
+                <div class="price-old">
+                    <span class="price-label">De:</span>
+                    <span class="price-value">R$ 5.491</span>
+                </div>
+                <div class="price-current">
+                    <span class="price-label">Por apenas:</span>
+                    <div class="price-value">
+                        <span class="price-currency">R$</span>
+                        <span class="price-amount">997</span>
+                    </div>
+                    <span class="price-installment">ou 12x de R$ 97</span>
+                </div>
+                <div class="price-savings">
+                    Economia de R$ 4.494 (82% OFF)
+                </div>
+            </div>
+            
+            <button class="cta-button-mega" id="cta-mega" data-aos="zoom-in" data-aos-delay="400">
+                <span class="button-glow"></span>
+                <span class="button-particles"></span>
+                <span class="button-text">
+                    <span class="button-main">DECODIFICAR AGORA</span>
+                    <span class="button-sub">Acesso imediato • Garantia 30 dias</span>
+                </span>
+            </button>
+            
+            <div class="cta-urgency" data-aos="fade-up" data-aos-delay="600">
+                <div class="urgency-item">
+                    <svg class="urgency-icon" viewBox="0 0 24 24">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Oferta expira em <span id="urgency-timer">00:00:00</span></span>
+                </div>
+                <div class="urgency-item">
+                    <svg class="urgency-icon" viewBox="0 0 24 24">
+                        <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                    <span><span id="pessoas-vendo">23</span> pessoas vendo agora</span>
+                </div>
+                <div class="urgency-item">
+                    <svg class="urgency-icon" viewBox="0 0 24 24">
+                        <path d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Última compra há 4 minutos</span>
+                </div>
+            </div>
+            
+            <div class="cta-trust-badges" data-aos="fade-up" data-aos-delay="800">
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>SSL Seguro</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3v-8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                    </svg>
+                    <span>Pagamento Protegido</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Garantia 30 Dias</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-matrix">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="glitch" data-text="STETIK">STETIK</span>
+                <span class="footer-subtitle">CLUB</span>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#termos">Termos de Uso</a>
+                <a href="#privacidade">Política de Privacidade</a>
+                <a href="#contato">Contato</a>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                        <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="footer-copy">
+                <p>© 2024 STETIK CLUB. Todos os direitos reservados.</p>
+                <p class="footer-disclaimer">Este site não faz parte do Facebook ou Meta. Não somos endossados pelo Facebook de nenhuma forma.</p>
+            </div>
+            
+            <!-- Easter Egg -->
+            <div class="easter-egg" id="easter-egg">
+                <div class="easter-content">
+                    <p>CÓDIGO SECRETO DESBLOQUEADO 🎯</p>
+                    <p class="easter-bonus">Ganhe +3 BÔNUS EXCLUSIVOS ao se inscrever!</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal dos Gatilhos -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-gatilho">
+            <button class="modal-close" id="modal-close">×</button>
+            <div class="modal-content" id="modal-content">
+                <!-- Conteúdo dinâmico -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
